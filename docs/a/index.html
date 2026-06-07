@@ -48,10 +48,10 @@ a { color: inherit; text-decoration: none; }
 /* Hamburger button — mobile only */
 .nav-toggle { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; background: transparent; border: 1.5px solid var(--c-line); color: var(--c-primary); cursor: pointer; padding: 0; transition: background .2s ease, border-color .2s ease; flex-shrink: 0; }
 .nav-toggle:hover { background: var(--c-accent-soft); border-color: var(--c-accent); }
-.nav-cta { display: none; }
+.nav .nav-cta { display: none; }
 @media (min-width: 920px) {
-  .nav-toggle { display: none; }
-  .nav-cta { display: inline-flex; }
+  .nav .nav-toggle { display: none; }
+  .nav .nav-cta { display: inline-flex; }
 }
 
 /* Slide-in menu panel — mobile */
