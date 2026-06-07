@@ -141,3 +141,26 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# Local env
+.env
+.env.local
+.env.*.local
+
+# Lovable
+.lovable/
+
+# Supabase local
+supabase/.branches/
+supabase/.temp/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Build artifacts
+dist/
+build/
+.cache/
