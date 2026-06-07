@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="de-AT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tropeninstitut.Wien — Reisemedizin mit Charakter · 1060 Wien</title>
+<meta name="description" content="Praxis von Univ.-Prof. Dr. Alexander Zoufaly. Persönliche Reisemedizin, Tropenmedizin, Infektionsabklärung. Mariahilfer Straße 1060 Wien.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --c-bg: #FAF5EE;
+  --c-cream: #F2EAD8;
+  --c-surface: #FFFFFF;
+  --c-paper: #FFFBF3;
+  --c-ink: #2C2825;
+  --c-muted: #6E6357;
+  --c-line: #E0D5BF;
+  --c-line-soft: #EFE6D2;
+  --c-primary: #2C2825;
+  --c-accent: #C8623B;
+  --c-accent-deep: #A14E2D;
+  --c-accent-soft: #E8CEB8;
+  --c-gold: #B89968;
+  --f-sans: "Inter", system-ui, sans-serif;
+  --f-display: "Fraunces", Georgia, serif;
+  --r-sm: 4px;
+  --r-md: 8px;
+  --r-lg: 12px;
+  --max: 1240px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { font-family: var(--f-sans); color: var(--c-ink); background: var(--c-bg); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4 { font-family: var(--f-display); font-weight: 500; letter-spacing: -0.015em; line-height: 1.1; }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+.container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+/* HEADER */
+.site-header { padding: 28px 0; border-bottom: 1px solid var(--c-line-soft); }
+.nav { display: flex; align-items: center; justify-content: space-between; padding: 0 24px; max-width: var(--max); margin: 0 auto; gap: 20px; }
+.logo { font-family: var(--f-display); font-weight: 500; font-size: 26px; color: var(--c-primary); letter-spacing: -0.02em; }
+.logo em { font-style: italic; font-weight: 400; color: var(--c-accent-deep); }
+.nav-links { display: none; gap: 36px; font-size: 14px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--c-ink); }
+.nav-links a { padding-bottom: 4px; border-bottom: 1.5px solid transparent; transition: border-color .2s ease; }
+.nav-links a:hover { border-color: var(--c-accent); }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 24px; font-weight: 500; font-size: 15px; font-family: var(--f-sans); transition: all .2s ease; cursor: pointer; border: 1.5px solid var(--c-primary); border-radius: var(--r-sm); }
+.btn-primary { background: var(--c-primary); color: var(--c-bg); }
+.btn-primary:hover { background: var(--c-accent-deep); border-color: var(--c-accent-deep); }
+.btn-outline { background: transparent; color: var(--c-primary); }
+.btn-outline:hover { background: var(--c-primary); color: var(--c-bg); }
+.btn-lg { padding: 16px 32px; }
+@media (min-width: 920px) { .nav-links { display: flex; } }
+
+/* MASTHEAD — Editorial Style */
+.masthead { padding: 72px 0 32px; }
+.issue-line { display: flex; align-items: baseline; justify-content: space-between; padding-bottom: 16px; border-bottom: 1px solid var(--c-line); margin-bottom: 32px; font-size: 12px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--c-muted); }
+.issue-line span:last-child { color: var(--c-accent-deep); }
+
+/* HERO */
+.hero-edit { padding: 16px 0 96px; }
+.hero-grid { display: grid; grid-template-columns: 1fr; gap: 56px; align-items: start; }
+@media (min-width: 980px) { .hero-edit { padding: 32px 0 120px; } .hero-grid { grid-template-columns: 1.15fr 1fr; gap: 80px; } }
+.hero-meta { display: inline-flex; align-items: center; gap: 12px; font-size: 13px; color: var(--c-accent-deep); font-weight: 600; letter-spacing: 0.06em; margin-bottom: 28px; }
+.hero-meta::before { content: ""; width: 24px; height: 1px; background: var(--c-accent); }
+.hero h1 { font-size: clamp(48px, 7vw, 96px); line-height: 0.96; letter-spacing: -0.03em; color: var(--c-primary); margin-bottom: 36px; font-weight: 400; }
+.hero h1 em { font-style: italic; color: var(--c-accent-deep); font-weight: 400; }
+.hero-lead { font-family: var(--f-display); font-weight: 400; font-style: italic; font-size: 22px; line-height: 1.5; color: var(--c-muted); margin-bottom: 40px; max-width: 540px; }
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 40px; }
+.hero-byline { display: flex; align-items: center; gap: 16px; padding-top: 32px; border-top: 1px solid var(--c-line); }
+.byline-avatar { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--c-accent), var(--c-accent-deep)); flex-shrink: 0; }
+.byline-text { font-size: 14px; color: var(--c-muted); }
+.byline-text strong { display: block; font-family: var(--f-display); font-weight: 500; font-size: 17px; color: var(--c-primary); }
+
+.hero-visual { position: relative; aspect-ratio: 3/4; overflow: hidden; background: var(--c-primary); }
+.hero-visual::before { content: ""; position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=900&q=80&auto=format&fit=crop'); background-size: cover; background-position: center; }
+.hero-visual::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 60%, rgba(44,40,37,0.85)); }
+.hero-caption { position: absolute; bottom: 28px; left: 28px; right: 28px; color: var(--c-bg); z-index: 2; }
+.hero-caption-label { font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--c-accent-soft); margin-bottom: 8px; }
+.hero-caption h3 { font-family: var(--f-display); font-style: italic; font-weight: 500; font-size: 22px; color: #fff; line-height: 1.25; }
+
+/* TRUST STRIP — Editorial */
+.trust-strip { padding: 28px 0; border-top: 1px solid var(--c-line); border-bottom: 1px solid var(--c-line); background: var(--c-paper); }
+.trust-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; text-align: center; }
+@media (min-width: 720px) { .trust-row { grid-template-columns: repeat(5, 1fr); } }
+.trust-item { font-size: 13px; color: var(--c-muted); letter-spacing: 0.04em; }
+.trust-item strong { display: block; font-family: var(--f-display); font-weight: 500; font-size: 28px; color: var(--c-accent-deep); margin-bottom: 4px; }
+
+/* SECTIONS */
+section.block { padding: 96px 0; }
+section.cream { background: var(--c-cream); }
+.section-head { max-width: 760px; margin-bottom: 64px; }
+.section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+.section-label { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 0.22em; color: var(--c-accent-deep); text-transform: uppercase; margin-bottom: 18px; }
+.section-head h2 { font-size: clamp(38px, 5vw, 60px); color: var(--c-primary); margin-bottom: 20px; font-weight: 400; line-height: 1.05; letter-spacing: -0.025em; }
+.section-head h2 em { font-style: italic; color: var(--c-accent-deep); }
+.section-head p { font-size: 19px; color: var(--c-muted); font-family: var(--f-display); font-weight: 400; }
+
+/* MAGAZINE BLOCK (Editorial columns) */
+.mag-row { display: grid; grid-template-columns: 1fr; gap: 40px; }
+@media (min-width: 760px) { .mag-row { grid-template-columns: 1fr 1.4fr; gap: 56px; } }
+.mag-img { aspect-ratio: 4/5; background-size: cover; background-position: center; background-color: var(--c-primary); }
+.mag-content h3 { font-size: clamp(28px, 3.6vw, 40px); margin-bottom: 20px; color: var(--c-primary); line-height: 1.1; font-weight: 400; }
+.mag-content h3 em { font-style: italic; color: var(--c-accent-deep); }
+.mag-lead { font-family: var(--f-display); font-style: italic; font-size: 19px; line-height: 1.55; color: var(--c-muted); margin-bottom: 24px; border-left: 2px solid var(--c-accent); padding-left: 20px; }
+.mag-content p { font-size: 16px; color: var(--c-muted); margin-bottom: 16px; }
+.mag-content p:last-child { margin-bottom: 0; }
+
+/* DESTINATIONS */
+.dest-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+@media (min-width: 760px) { .dest-grid { grid-template-columns: repeat(4, 1fr); gap: 20px; } }
+.dest { position: relative; aspect-ratio: 4/5; overflow: hidden; cursor: pointer; transition: transform .25s ease; background-color: var(--c-primary); background-size: cover; background-position: center; padding: 20px; display: flex; align-items: flex-end; color: #fff; }
+.dest::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(44,40,37,0.0) 20%, rgba(44,40,37,0.88)); transition: background .25s ease; }
+.dest:hover { transform: translateY(-4px); }
+.dest:hover::before { background: linear-gradient(180deg, rgba(44,40,37,0.0) 20%, rgba(44,40,37,0.75)); }
+.dest-cap { position: relative; z-index: 2; }
+.dest-cap .meta { font-size: 11px; color: var(--c-accent-soft); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 6px; }
+.dest-cap h4 { font-family: var(--f-display); font-weight: 500; font-size: 22px; color: #fff; }
+.d1 { background-image: url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=700&q=80&auto=format&fit=crop'); }
+.d2 { background-image: url('https://images.unsplash.com/photo-1528181304800-259b08848526?w=700&q=80&auto=format&fit=crop'); }
+.d3 { background-image: url('https://images.unsplash.com/photo-1564507592333-c60657eea523?w=700&q=80&auto=format&fit=crop'); }
+.d4 { background-image: url('https://images.unsplash.com/photo-1526392060635-9d6019884377?w=700&q=80&auto=format&fit=crop'); }
+.d5 { background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&q=80&auto=format&fit=crop'); }
+.d6 { background-image: url('https://images.unsplash.com/photo-1530591094024-9e36dc2bbf7c?w=700&q=80&auto=format&fit=crop'); }
+.d7 { background-image: url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=700&q=80&auto=format&fit=crop'); }
+.d8 { background-image: url('https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=700&q=80&auto=format&fit=crop'); }
+
+/* REELS */
+.reels { display: grid; grid-template-columns: 1fr; gap: 24px; }
+@media (min-width: 720px) { .reels { grid-template-columns: repeat(3, 1fr); } }
+.reel { position: relative; aspect-ratio: 9/16; overflow: hidden; cursor: pointer; transition: transform .25s ease; background-color: var(--c-primary); background-size: cover; background-position: center; padding: 24px; display: flex; align-items: flex-end; color: #fff; }
+.reel:hover { transform: translateY(-3px); }
+.reel::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 30%, rgba(44,40,37,0.82)); z-index: 1; }
+.reel-cap { position: relative; z-index: 2; }
+.reel-cap .duration { display: inline-block; padding: 4px 10px; background: rgba(0,0,0,0.55); border-radius: 2px; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; margin-bottom: 12px; }
+.reel-cap h4 { font-family: var(--f-display); font-weight: 500; font-style: italic; font-size: 19px; color: #fff; }
+.r1 { background-image: url('https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?w=700&q=80&auto=format&fit=crop'); }
+.r2 { background-image: url('https://images.unsplash.com/photo-1632053002802-d2caa7c7bbf5?w=700&q=80&auto=format&fit=crop'); }
+.r3 { background-image: url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=700&q=80&auto=format&fit=crop'); }
+.reel-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; border-radius: 50%; background: var(--c-accent); display: flex; align-items: center; justify-content: center; z-index: 2; }
+.reel-play svg { width: 22px; height: 22px; color: #fff; margin-left: 3px; }
+
+/* QUOTE BLOCK */
+.quote-block { background: var(--c-paper); padding: 96px 0; }
+.quote-wrap { max-width: 880px; margin: 0 auto; text-align: center; }
+.quote-mark { font-family: var(--f-display); font-size: 96px; font-weight: 500; color: var(--c-accent); line-height: 0.5; margin-bottom: 20px; }
+.quote-text { font-family: var(--f-display); font-weight: 400; font-style: italic; font-size: clamp(28px, 3.8vw, 44px); line-height: 1.25; color: var(--c-primary); margin-bottom: 32px; letter-spacing: -0.015em; }
+.quote-author { font-size: 14px; color: var(--c-muted); letter-spacing: 0.06em; }
+.quote-author strong { display: block; font-family: var(--f-display); font-weight: 500; font-style: normal; font-size: 18px; color: var(--c-primary); margin-bottom: 4px; letter-spacing: 0; }
+
+/* BLOG */
+.posts { display: grid; grid-template-columns: 1fr; gap: 32px; }
+@media (min-width: 760px) { .posts { grid-template-columns: repeat(3, 1fr); gap: 36px; } }
+.post { background: transparent; transition: transform .2s ease; }
+.post:hover { transform: translateY(-4px); }
+.post-img { aspect-ratio: 4/3; background-size: cover; background-position: center; background-color: var(--c-primary); margin-bottom: 18px; }
+.post-cat { display: inline-block; font-size: 11px; font-weight: 600; color: var(--c-accent-deep); letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 12px; }
+.post h4 { font-family: var(--f-display); font-weight: 500; font-size: 22px; color: var(--c-primary); margin-bottom: 12px; line-height: 1.25; }
+.post-meta { font-size: 13px; color: var(--c-muted); }
+.p1 { background-image: url('https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=800&q=80&auto=format&fit=crop'); }
+.p2 { background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80&auto=format&fit=crop'); }
+.p3 { background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80&auto=format&fit=crop'); }
+
+/* FAQ */
+.faq-wrap { max-width: 820px; margin: 0 auto; }
+.faq-item { border-bottom: 1px solid var(--c-line); }
+.faq-item summary { list-style: none; cursor: pointer; padding: 28px 0; display: flex; justify-content: space-between; align-items: center; font-family: var(--f-display); font-weight: 500; font-size: 21px; color: var(--c-primary); letter-spacing: -0.01em; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "+"; font-family: var(--f-sans); font-size: 24px; font-weight: 300; color: var(--c-accent); transition: transform .2s ease; }
+.faq-item[open] summary::after { content: "−"; }
+.faq-item p { padding: 0 0 28px; color: var(--c-muted); font-size: 17px; line-height: 1.75; }
+
+/* CTA BANNER */
+.cta-banner { background: var(--c-primary); color: var(--c-bg); padding: 80px 40px; max-width: 1100px; margin: 96px auto; text-align: center; position: relative; overflow: hidden; }
+.cta-banner::before { content: '"'; position: absolute; top: -40px; left: 30px; font-family: var(--f-display); font-size: 240px; color: var(--c-accent); opacity: 0.2; line-height: 1; }
+.cta-banner-label { font-size: 11px; font-weight: 600; letter-spacing: 0.24em; color: var(--c-accent); text-transform: uppercase; margin-bottom: 18px; }
+.cta-banner h2 { font-size: clamp(34px, 4.4vw, 52px); color: #fff; line-height: 1.05; margin-bottom: 20px; font-weight: 400; letter-spacing: -0.025em; }
+.cta-banner h2 em { font-style: italic; color: var(--c-accent-soft); }
+.cta-banner p { color: rgba(250,245,238,0.8); margin: 0 auto 36px; max-width: 540px; font-size: 17px; font-family: var(--f-display); font-style: italic; }
+.cta-banner .btn-outline { color: #fff; border-color: rgba(255,255,255,0.4); }
+.cta-banner .btn-outline:hover { background: #fff; color: var(--c-primary); }
+.cta-banner .btn-primary { background: var(--c-accent); border-color: var(--c-accent); color: #fff; }
+.cta-banner .btn-primary:hover { background: var(--c-accent-deep); border-color: var(--c-accent-deep); }
+.cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+
+/* FOOTER */
+footer { background: var(--c-primary); color: rgba(250,245,238,0.78); padding: 72px 0 32px; }
+.foot-grid { display: grid; grid-template-columns: 1fr; gap: 40px; padding-bottom: 32px; border-bottom: 1px solid rgba(250,245,238,0.1); }
+@media (min-width: 760px) { .foot-grid { grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; } }
+.foot-brand { font-family: var(--f-display); font-weight: 500; font-size: 28px; color: #fff; margin-bottom: 16px; letter-spacing: -0.02em; }
+.foot-brand em { font-style: italic; font-weight: 400; color: var(--c-accent-soft); }
+.foot-col h4 { font-family: var(--f-sans); color: #fff; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 18px; }
+.foot-col a { display: block; padding: 5px 0; color: rgba(250,245,238,0.65); font-size: 14px; }
+.foot-col a:hover { color: var(--c-accent-soft); }
+.foot-bottom { padding-top: 24px; display: flex; justify-content: space-between; flex-wrap: wrap; font-size: 12px; gap: 16px; color: rgba(250,245,238,0.5); letter-spacing: 0.08em; }
+
+.watermark { position: fixed; bottom: 16px; right: 16px; background: var(--c-accent-deep); color: #fff; padding: 8px 14px; font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; z-index: 100; }
+.watermark a { color: var(--c-accent-soft); text-decoration: none; }
+
+/* KONFIGURATOR — Editorial Style */
+.konfig-section { padding: 88px 0 96px; background: var(--c-paper); border-top: 1px solid var(--c-line); border-bottom: 1px solid var(--c-line); }
+.konfig-card { background: #fff; border: 1px solid var(--c-line); padding: 48px 44px; max-width: 940px; margin: 0 auto; position: relative; box-shadow: 0 24px 60px -20px rgba(44,40,37,0.12); }
+.konfig-head { margin-bottom: 32px; }
+.konfig-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--c-accent-soft); color: var(--c-accent-deep); padding: 6px 14px; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 22px; }
+.konfig-badge svg { width: 13px; height: 13px; }
+.konfig-head h2 { font-family: var(--f-display); font-weight: 400; font-size: clamp(28px, 3.6vw, 40px); line-height: 1.1; color: var(--c-primary); letter-spacing: -0.022em; margin-bottom: 16px; }
+.konfig-head h2 em { font-style: italic; color: var(--c-accent-deep); }
+.konfig-sub { font-family: var(--f-display); font-style: italic; font-size: 17px; color: var(--c-muted); max-width: 640px; line-height: 1.55; border-left: 2px solid var(--c-accent); padding-left: 18px; }
+.konfig-form { display: grid; grid-template-columns: 1fr; gap: 18px; }
+@media (min-width: 760px) { .konfig-form { grid-template-columns: 2fr 1fr 1fr; align-items: end; } }
+.field label { display: block; font-size: 11px; font-weight: 600; color: var(--c-muted); margin-bottom: 8px; letter-spacing: 0.16em; text-transform: uppercase; }
+.field select, .field input { width: 100%; padding: 14px 16px; border-radius: var(--r-sm); border: 1px solid var(--c-line); background: var(--c-bg); color: var(--c-ink); font-family: var(--f-sans); font-size: 15px; }
+.field select:focus, .field input:focus { outline: 2px solid var(--c-accent); border-color: transparent; }
+.konfig-cta-field { grid-column: 1 / -1; margin-top: 8px; }
+.btn-konfig { background: var(--c-primary); color: var(--c-bg); padding: 15px 30px; font-size: 14px; letter-spacing: 0.04em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 10px; border: 1.5px solid var(--c-primary); border-radius: var(--r-sm); cursor: pointer; font-family: var(--f-sans); font-weight: 600; transition: all .2s ease; }
+.btn-konfig:hover { background: var(--c-accent-deep); border-color: var(--c-accent-deep); }
+.konfig-result { display: none; margin-top: 32px; padding: 32px; background: var(--c-cream); border-left: 2px solid var(--c-accent); position: relative; }
+.konfig-result.show { display: block; }
+.konfig-result h3 { font-family: var(--f-display); font-weight: 500; font-size: 24px; color: var(--c-primary); margin-bottom: 10px; letter-spacing: -0.01em; }
+.konfig-result h3 em { font-style: italic; color: var(--c-accent-deep); }
+.konfig-result > p { color: var(--c-muted); font-size: 15px; margin-bottom: 20px; }
+.konfig-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
+.konfig-tag { background: #fff; border: 1px solid var(--c-accent); color: var(--c-accent-deep); padding: 6px 14px; font-size: 13px; font-weight: 600; border-radius: var(--r-sm); letter-spacing: 0.02em; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav">
+    <a href="#" class="logo">Tropeninstitut.<em>Wien</em></a>
+    <nav class="nav-links">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#reisen">Reiseziele</a>
+      <a href="#about">Über uns</a>
+      <a href="#aktuelles">Aktuelles</a>
+    </nav>
+    <a href="#booking" class="btn btn-primary">Termin buchen</a>
+  </div>
+</header>
+
+<div class="container">
+  <div class="masthead">
+    <div class="issue-line">
+      <span>Privatordination · Mariahilfer Straße · 1060 Wien</span>
+      <span>Ausgabe Juni · 2026</span>
+    </div>
+  </div>
+</div>
+
+<section class="hero-edit">
+  <div class="container hero-grid">
+    <div>
+      <div class="hero-meta">Reisemedizin · Tropenmedizin · Innere Medizin</div>
+      <h1>Eine gute Reise beginnt mit <em>Zuhören</em>.</h1>
+      <p class="hero-lead">Wir nehmen uns Zeit für Ihre Fragen, kennen jede Destination aus erster Hand, und haben jeden Impfstoff vor Ort. So wie Reisemedizin sein sollte.</p>
+      <div class="hero-actions">
+        <a href="#booking" class="btn btn-primary btn-lg">Termin vereinbaren</a>
+        <a href="#about" class="btn btn-outline btn-lg">Lerne uns kennen</a>
+      </div>
+      <div class="hero-byline">
+        <div class="byline-avatar"></div>
+        <div class="byline-text">
+          <strong>Univ.-Prof. Dr. Alexander Zoufaly</strong>
+          FA Innere Medizin und Infektiologie · MedUni Wien
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-caption">
+        <div class="hero-caption-label">Im Bild</div>
+        <h3>"Wir nehmen uns die Zeit, die jede Reise verdient."</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust-strip">
+  <div class="container">
+    <div class="trust-row">
+      <div class="trust-item"><strong>12.000+</strong>Patient:innen / Jahr</div>
+      <div class="trust-item"><strong>4,9★</strong>Google · 800+ Reviews</div>
+      <div class="trust-item"><strong>48 h</strong>Wartezeit Termin</div>
+      <div class="trust-item"><strong>30+</strong>Reise-Impfstoffe lagernd</div>
+      <div class="trust-item"><strong>20+</strong>Jahre Erfahrung</div>
+    </div>
+  </div>
+</div>
+
+<section class="konfig-section">
+  <div class="container">
+    <div class="konfig-card" id="konfig">
+      <div class="konfig-head">
+        <span class="konfig-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          KI-gestützt · Premiere
+        </span>
+        <h2>Wohin geht die Reise? <em>Wir haben Antworten.</em></h2>
+        <p class="konfig-sub">Reiseziel, Datum und Art der Reise eingeben — Sie erhalten in Sekunden eine Übersicht der empfohlenen Impfungen. Die finale, individuelle Beratung erfolgt persönlich beim Termin.</p>
+      </div>
+      <form class="konfig-form" onsubmit="return zeigeReco(event)">
+        <div class="field">
+          <label>Reiseziel</label>
+          <select id="ziel">
+            <option>Land oder Region wählen…</option>
+            <option>Thailand</option>
+            <option>Indien / Sri Lanka</option>
+            <option>Südafrika / Namibia / Botswana</option>
+            <option>Kenia / Tansania</option>
+            <option>Brasilien / Peru / Bolivien</option>
+            <option>Mexiko / Costa Rica</option>
+            <option>Vietnam / Kambodscha</option>
+            <option>Marokko / Ägypten</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Abreise</label>
+          <input type="date" id="datum">
+        </div>
+        <div class="field">
+          <label>Reiseart</label>
+          <select id="art">
+            <option>Art wählen</option>
+            <option>Rundreise</option>
+            <option>Strand / Pauschal</option>
+            <option>Trekking / Abenteuer</option>
+            <option>Beruflich</option>
+          </select>
+        </div>
+        <div class="konfig-cta-field">
+          <button type="submit" class="btn-konfig">
+            Empfehlung anzeigen
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </form>
+      <div class="konfig-result" id="result">
+        <h3><em>Empfehlung</em> für Ihre Reise</h3>
+        <p>Diese Impfungen empfehlen wir basierend auf Ihrem Reiseziel — die finale Beratung erfolgt persönlich beim Termin.</p>
+        <div class="konfig-tags" id="tags"></div>
+        <a href="#booking" class="btn btn-primary">Termin sichern</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-label">Editorial · Vol. 01</span>
+      <h2>Reisemedizin <em>nach Maß</em>.</h2>
+      <p>Vier medizinische Säulen unter einem Dach, persönlich, vorausschauend, ohne Wartezimmer-Stress.</p>
+    </div>
+    <div class="mag-row">
+      <div class="mag-img" style="background-image: url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=700&q=80&auto=format&fit=crop');"></div>
+      <div class="mag-content">
+        <h3>Reisemedizin &amp; Reiseimpfungen — <em>für jede Destination</em>.</h3>
+        <p class="mag-lead">Vom Bali-Backpacker bis zum Geschäftsreisenden in Lagos — wir kennen die Risiken jeder Region.</p>
+        <p>12 Regionen detailliert ausgearbeitet, Gelbfieber-Impfstelle, Malariaprophylaxe, Last-minute-Termine. Alle Impfstoffe vor Ort, in einer Hand: Beratung und Verabreichung im selben Termin.</p>
+        <p>Sie erhalten neben den Impfungen einen schriftlichen Reise-Plan: Empfehlungen für Mückenschutz, Trinkwasser, Ernährung, Notfall-Apotheke. Damit Sie nicht nur geschützt sind, sondern entspannt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block cream">
+  <div class="container">
+    <div class="mag-row">
+      <div class="mag-content">
+        <h3>Infektionsmedizin &amp; <em>Tropenrückkehrer</em>.</h3>
+        <p class="mag-lead">Wenn die Reise endet, beginnt manchmal die eigentliche Geschichte. Wir hören zu.</p>
+        <p>HIV-Diagnostik und PrEP, Hepatitis, Borreliose, sexuell übertragbare Infektionen, unklare Infekte und Fieber unklarer Ursache. Diagnostik in einer Hand — keine Verweisketten zwischen Spezialisten.</p>
+        <p>Innere Medizin als zweite Säule: regelmäßige Vorsorge, Check-ups, internistische Abklärung nach Tropenrückkehrern. Beide Bereiche an einem Ort.</p>
+      </div>
+      <div class="mag-img" style="background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=700&q=80&auto=format&fit=crop');"></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="reisen">
+  <div class="container">
+    <div class="section-head center">
+      <span class="section-label">Destinationen</span>
+      <h2>Wohin <em>geht es</em>?</h2>
+      <p>Wählen Sie Ihre Region — Sie finden Impfempfehlungen, Risiken und unsere Beratungs-Module.</p>
+    </div>
+    <div class="dest-grid">
+      <a href="#" class="dest d1"><div class="dest-cap"><div class="meta">№ 01</div><h4>Tropisches Afrika</h4></div></a>
+      <a href="#" class="dest d2"><div class="dest-cap"><div class="meta">№ 02</div><h4>Südostasien</h4></div></a>
+      <a href="#" class="dest d3"><div class="dest-cap"><div class="meta">№ 03</div><h4>Indien · Sri Lanka</h4></div></a>
+      <a href="#" class="dest d4"><div class="dest-cap"><div class="meta">№ 04</div><h4>Südamerika</h4></div></a>
+      <a href="#" class="dest d5"><div class="dest-cap"><div class="meta">№ 05</div><h4>Mittelamerika · Karibik</h4></div></a>
+      <a href="#" class="dest d6"><div class="dest-cap"><div class="meta">№ 06</div><h4>Südliches Afrika</h4></div></a>
+      <a href="#" class="dest d7"><div class="dest-cap"><div class="meta">№ 07</div><h4>Ostasien</h4></div></a>
+      <a href="#" class="dest d8"><div class="dest-cap"><div class="meta">№ 08</div><h4>Nordafrika</h4></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="quote-block">
+  <div class="container">
+    <div class="quote-wrap">
+      <div class="quote-mark">"</div>
+      <p class="quote-text">Wir wollten ein Tropeninstitut bauen, in dem sich Menschen verstanden fühlen — nicht eines, in dem nur Impfungen verabreicht werden.</p>
+      <div class="quote-author">
+        <strong>Univ.-Prof. Dr. Alexander Zoufaly</strong>
+        Gründer, Tropeninstitut.Wien
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="container">
+    <div class="section-head center">
+      <span class="section-label">Einblicke</span>
+      <h2>Drei Minuten <em>aus der Praxis</em>.</h2>
+      <p>Was Sie bei uns erwartet — vom Empfang bis zur Beratung.</p>
+    </div>
+    <div class="reels">
+      <div class="reel r1">
+        <button class="reel-play" aria-label="Video"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+        <div class="reel-cap"><span class="duration">0:42</span><h4>Ein Tag im Tropeninstitut</h4></div>
+      </div>
+      <div class="reel r2">
+        <button class="reel-play" aria-label="Video"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+        <div class="reel-cap"><span class="duration">0:35</span><h4>Reiseimpfung — so läuft's</h4></div>
+      </div>
+      <div class="reel r3">
+        <button class="reel-play" aria-label="Video"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+        <div class="reel-cap"><span class="duration">0:48</span><h4>Wir nehmen uns Zeit</h4></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block cream" id="aktuelles">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-label">Aktuelles · Reisewarnungen</span>
+      <h2>Was wir <em>diese Woche</em> beobachten.</h2>
+      <p>Outbreaks, Impfempfehlungen, reisemedizinische Themen — kuratiert von der Praxis.</p>
+    </div>
+    <div class="posts">
+      <article class="post">
+        <div class="post-img p1"></div>
+        <span class="post-cat">Reisewarnung</span>
+        <h4>Chikungunya-Ausbruch in Costa Rica — was Reisende jetzt wissen müssen</h4>
+        <div class="post-meta">21. April 2026 · 3 Min Lesezeit</div>
+      </article>
+      <article class="post">
+        <div class="post-img p2"></div>
+        <span class="post-cat">Tropenmedizin</span>
+        <h4>Malaria 2026 · Wo die Risikogebiete liegen und wie Sie sich schützen</h4>
+        <div class="post-meta">13. April 2026 · 5 Min Lesezeit</div>
+      </article>
+      <article class="post">
+        <div class="post-img p3"></div>
+        <span class="post-cat">Impfberatung</span>
+        <h4>Nebenwirkungen von Reiseimpfungen — was ist normal, wann zur Praxis?</h4>
+        <div class="post-meta">21. April 2026 · 4 Min Lesezeit</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="container">
+    <div class="section-head center">
+      <span class="section-label">Häufige Fragen</span>
+      <h2>Was Sie <em>wissen sollten</em>.</h2>
+    </div>
+    <div class="faq-wrap">
+      <details class="faq-item" open>
+        <summary>Wie schnell bekomme ich einen Termin?</summary>
+        <p>In der Regel binnen 48 Stunden, auch für Last-minute-Impfungen. Online-Buchung 24/7 möglich, telefonisch jederzeit unter +43 670 6079977.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Welche Impfstoffe sind vorrätig?</summary>
+        <p>Sämtliche gängigen Reise- und Schutzimpfstoffe: Gelbfieber, Hepatitis A und B, Typhus, Tollwut, Japan-B-Enzephalitis, Cholera, FSME, Meningokokken, Influenza und weitere.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Übernimmt die Krankenkasse die Kosten?</summary>
+        <p>Als Privatordination rechnen wir direkt mit Ihnen ab. Bei vielen Zusatzversicherungen werden Reiseimpfungen anteilig erstattet — wir stellen die Rechnung passend dafür aus.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Bekomme ich auch eine Beratung ohne Impfung?</summary>
+        <p>Ja, gerne. Eine reine Reise- und Infektionsberatung ist möglich — beispielsweise zur Einschätzung der Risiken Ihres Reiseziels, ohne dass Sie sich gleich impfen lassen müssen.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Bieten Sie auch Tauglichkeitsuntersuchungen an?</summary>
+        <p>Ja, sowohl Tropentauglichkeit als auch allgemeine ärztliche Tauglichkeitsbefunde für Beruf, Reise oder Sport. Bitte bei der Terminbuchung erwähnen.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="cta-banner" id="booking">
+    <div class="cta-banner-label">Ihr nächster Schritt</div>
+    <h2>Buchen Sie Ihren Termin — und <em>reisen Sie ruhiger</em>.</h2>
+    <p>Online in 60 Sekunden. Alle Impfstoffe vorrätig, kurzfristige Termine die Regel.</p>
+    <div class="cta-actions">
+      <a href="#" class="btn btn-primary btn-lg">Termin online buchen</a>
+      <a href="tel:+436706079977" class="btn btn-outline btn-lg">+43 670 6079977</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="foot-brand">Tropeninstitut.<em>Wien</em></div>
+        <p style="line-height:1.75;">Univ.-Prof. Dr. Alexander Zoufaly<br>FA für Innere Medizin und Infektiologie<br>Mariahilfer Straße 69/10<br>1060 Wien</p>
+      </div>
+      <div class="foot-col">
+        <h4>Bereiche</h4>
+        <a href="#">Reiseimpfungen</a><a href="#">Tropenmedizin</a><a href="#">Infektionsmedizin</a><a href="#">Tauglichkeit</a>
+      </div>
+      <div class="foot-col">
+        <h4>Service</h4>
+        <a href="#">Termin buchen</a><a href="#">Reise-Konfigurator</a><a href="#">Newsletter</a><a href="#">Aktuelles</a>
+      </div>
+      <div class="foot-col">
+        <h4>Kontakt</h4>
+        <a href="tel:+436706079977">+43 670 6079977</a><a href="mailto:office@tropeninstitut.wien">office@tropeninstitut.wien</a><a href="#">Anfahrt</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Tropeninstitut.Wien</div>
+      <div><a href="#">Impressum</a> · <a href="#">Datenschutz</a> · <a href="#">Cookies</a></div>
+    </div>
+  </div>
+</footer>
+
+<div class="watermark">Variante C · Editorial · <a href="../">zurück</a></div>
+
+<script>
+// Dummy-Daten — später aus Supabase (Tabelle `countries`)
+const empf = {
+  "Thailand": ["Hepatitis A", "Typhus", "Tollwut", "Japan-B-Enzephalitis", "Malaria-Prophylaxe (regional)"],
+  "Indien / Sri Lanka": ["Hepatitis A", "Hepatitis B", "Typhus", "Tollwut", "Japan-B-Enzephalitis"],
+  "Südafrika / Namibia / Botswana": ["Hepatitis A", "Tollwut", "Malaria-Prophylaxe", "Standard-Auffrischung"],
+  "Kenia / Tansania": ["Gelbfieber (Pflicht)", "Hepatitis A", "Typhus", "Tollwut", "Malaria-Prophylaxe"],
+  "Brasilien / Peru / Bolivien": ["Gelbfieber", "Hepatitis A", "Typhus", "Malaria-Prophylaxe (Amazonas)"],
+  "Mexiko / Costa Rica": ["Hepatitis A", "Typhus", "Tollwut", "Dengue-Schutz"],
+  "Vietnam / Kambodscha": ["Hepatitis A", "Typhus", "Japan-B-Enzephalitis", "Tollwut"],
+  "Marokko / Ägypten": ["Hepatitis A", "Typhus", "Tollwut", "Standard-Auffrischung"]
+};
+function zeigeReco(e) {
+  e.preventDefault();
+  const z = document.getElementById('ziel').value;
+  const r = document.getElementById('result');
+  const t = document.getElementById('tags');
+  const liste = empf[z];
+  if (!liste) {
+    t.innerHTML = '<span class="konfig-tag">Bitte Reiseziel auswählen</span>';
+  } else {
+    t.innerHTML = liste.map(x => `<span class="konfig-tag">${x}</span>`).join('');
+  }
+  r.classList.add('show');
+  r.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  return false;
+}
+</script>
+
+</body>
+</html>
