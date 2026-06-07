@@ -34,8 +34,8 @@ img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 
-.site-header { padding: 24px 0; background: var(--c-bg); }
-.nav { display: flex; align-items: center; justify-content: space-between; padding: 0 24px; max-width: var(--max); margin: 0 auto; gap: 20px; }
+.site-header { position: fixed; top: 16px; left: 0; right: 0; z-index: 100; padding: 0 16px; pointer-events: none; }
+.nav { background: rgba(251, 248, 241, 0.86); backdrop-filter: saturate(180%) blur(16px); -webkit-backdrop-filter: saturate(180%) blur(16px); border: 1px solid rgba(228, 222, 205, 0.55); border-radius: 999px; padding: 10px 12px 10px 22px; display: flex; align-items: center; justify-content: space-between; max-width: var(--max); margin: 0 auto; gap: 16px; pointer-events: auto; box-shadow: 0 14px 32px -16px rgba(44,68,56,0.18); }
 .logo { display: flex; align-items: center; gap: 12px; font-family: var(--f-display); font-weight: 600; font-size: 22px; color: var(--c-primary); letter-spacing: -0.01em; }
 .logo-leaf { width: 28px; height: 28px; border-radius: 50%; background: var(--c-accent); display: flex; align-items: center; justify-content: center; }
 .logo-leaf svg { width: 16px; height: 16px; color: #fff; }
@@ -52,7 +52,7 @@ a { color: inherit; text-decoration: none; }
 @media (min-width: 920px) { .nav-links { display: flex; } }
 
 /* HERO */
-.hero { padding: 48px 0 96px; position: relative; }
+.hero { padding: 120px 0 96px; position: relative; }
 .hero::after { content: ""; position: absolute; top: 5%; right: -10%; width: 500px; height: 500px; border-radius: 50%; background: var(--c-accent-soft); opacity: 0.4; filter: blur(80px); z-index: -1; }
 .hero-grid { display: grid; grid-template-columns: 1fr; gap: 56px; align-items: center; }
 @media (min-width: 980px) { .hero { padding: 72px 0 120px; } .hero-grid { grid-template-columns: 1.1fr 1fr; gap: 88px; } }
@@ -67,7 +67,7 @@ a { color: inherit; text-decoration: none; }
 .trust-mini strong { display: block; font-family: var(--f-display); font-size: 24px; color: var(--c-primary); font-weight: 600; }
 
 .hero-visual { position: relative; aspect-ratio: 4/5; border-radius: var(--r-lg); overflow: hidden; background: var(--c-primary); box-shadow: 0 32px 80px -20px rgba(44,68,56,0.3); }
-.hero-visual::before { content: ""; position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=900&q=80&auto=format&fit=crop'); background-size: cover; background-position: center; }
+.hero-visual::before { content: ""; position: absolute; inset: 0; background-image: url('../assets/alex.jpg'), url('https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=900&q=80&auto=format&fit=crop'); background-size: cover; background-position: center top; }
 .hero-visual::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(44,68,56,0.7)); }
 .hero-tag { position: absolute; top: 28px; left: 28px; background: var(--c-bg); color: var(--c-primary); padding: 8px 14px; border-radius: 999px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; z-index: 2; box-shadow: 0 8px 24px rgba(44,68,56,0.15); }
 .hero-cap { position: absolute; bottom: 28px; left: 28px; right: 28px; color: #fff; z-index: 2; }
@@ -135,7 +135,7 @@ section.alt { background: var(--c-surface); border-radius: var(--r-lg) var(--r-l
 .about-grid { display: grid; grid-template-columns: 1fr; gap: 56px; align-items: center; }
 @media (min-width: 880px) { .about-grid { grid-template-columns: 1fr 1.15fr; gap: 80px; } }
 .about-photo { position: relative; aspect-ratio: 4/5; border-radius: var(--r-lg); overflow: hidden; background: var(--c-primary); box-shadow: 0 32px 80px -20px rgba(44,68,56,0.25); }
-.about-photo::before { content: ""; position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=900&q=80&auto=format&fit=crop'); background-size: cover; background-position: center; }
+.about-photo::before { content: ""; position: absolute; inset: 0; background-image: url('../assets/alex.jpg'), url('https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=900&q=80&auto=format&fit=crop'); background-size: cover; background-position: center top; }
 .about-photo .badge { position: absolute; top: 24px; left: 24px; background: var(--c-accent); color: #fff; padding: 8px 16px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; z-index: 2; }
 .about-text h2 { font-size: clamp(32px, 4.2vw, 44px); color: var(--c-primary); margin-bottom: 26px; }
 .about-text h2 em { font-style: italic; font-weight: 500; color: var(--c-accent-deep); }
@@ -232,8 +232,7 @@ footer { background: var(--c-primary); color: rgba(255,255,255,0.75); padding: 7
 <header class="site-header">
   <div class="nav">
     <a href="#" class="logo">
-      <span class="logo-leaf"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/></svg></span>
-      Tropeninstitut.<span style="color:var(--c-accent-deep);">Wien</span>
+      <img src="../assets/logo.svg" alt="Tropeninstitut.Wien" style="height: 40px; width: auto; display: block;">
     </a>
     <nav class="nav-links">
       <a href="#reisen">Reiseziele</a>
@@ -524,7 +523,7 @@ footer { background: var(--c-primary); color: rgba(255,255,255,0.75); padding: 7
   <div class="container">
     <div class="foot-grid">
       <div class="foot-col">
-        <div class="foot-brand"><span class="foot-brand-leaf"></span> Tropeninstitut.Wien</div>
+        <div class="foot-brand"><img src="../assets/logo.svg" alt="Tropeninstitut.Wien" style="height: 44px; width: auto; filter: brightness(0) invert(1); margin-bottom: 12px; display: block;"></div>
         <p style="line-height:1.7;">Univ.-Prof. Dr. Alexander Zoufaly<br>FA für Innere Medizin und Infektiologie<br>Mariahilfer Straße 69/10, 1060 Wien</p>
       </div>
       <div class="foot-col">
