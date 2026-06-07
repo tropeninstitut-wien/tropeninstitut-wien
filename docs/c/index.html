@@ -37,8 +37,8 @@ a { color: inherit; text-decoration: none; }
 .container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 
 /* HEADER */
-.site-header { padding: 28px 0; border-bottom: 1px solid var(--c-line-soft); }
-.nav { display: flex; align-items: center; justify-content: space-between; padding: 0 24px; max-width: var(--max); margin: 0 auto; gap: 20px; }
+.site-header { position: fixed; top: 16px; left: 0; right: 0; z-index: 100; padding: 0 16px; pointer-events: none; }
+.nav { background: rgba(250, 245, 238, 0.88); backdrop-filter: saturate(180%) blur(16px); -webkit-backdrop-filter: saturate(180%) blur(16px); border: 1px solid rgba(224, 213, 191, 0.6); padding: 12px 14px 12px 24px; display: flex; align-items: center; justify-content: space-between; max-width: var(--max); margin: 0 auto; gap: 16px; pointer-events: auto; box-shadow: 0 16px 36px -18px rgba(44,40,37,0.22); }
 .logo { font-family: var(--f-display); font-weight: 500; font-size: 26px; color: var(--c-primary); letter-spacing: -0.02em; }
 .logo em { font-style: italic; font-weight: 400; color: var(--c-accent-deep); }
 .nav-links { display: none; gap: 36px; font-size: 14px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--c-ink); }
@@ -53,7 +53,7 @@ a { color: inherit; text-decoration: none; }
 @media (min-width: 920px) { .nav-links { display: flex; } }
 
 /* MASTHEAD — Editorial Style */
-.masthead { padding: 72px 0 32px; }
+.masthead { padding: 130px 0 32px; }
 .issue-line { display: flex; align-items: baseline; justify-content: space-between; padding-bottom: 16px; border-bottom: 1px solid var(--c-line); margin-bottom: 32px; font-size: 12px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--c-muted); }
 .issue-line span:last-child { color: var(--c-accent-deep); }
 
@@ -73,7 +73,7 @@ a { color: inherit; text-decoration: none; }
 .byline-text strong { display: block; font-family: var(--f-display); font-weight: 500; font-size: 17px; color: var(--c-primary); }
 
 .hero-visual { position: relative; aspect-ratio: 3/4; overflow: hidden; background: var(--c-primary); }
-.hero-visual::before { content: ""; position: absolute; inset: 0; background-image: url('https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=900&q=80&auto=format&fit=crop'); background-size: cover; background-position: center; }
+.hero-visual::before { content: ""; position: absolute; inset: 0; background-image: url('../assets/alex.jpg'), url('https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=900&q=80&auto=format&fit=crop'); background-size: cover; background-position: center top; }
 .hero-visual::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 60%, rgba(44,40,37,0.85)); }
 .hero-caption { position: absolute; bottom: 28px; left: 28px; right: 28px; color: var(--c-bg); z-index: 2; }
 .hero-caption-label { font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--c-accent-soft); margin-bottom: 8px; }
@@ -227,7 +227,7 @@ footer { background: var(--c-primary); color: rgba(250,245,238,0.78); padding: 7
 
 <header class="site-header">
   <div class="nav">
-    <a href="#" class="logo">Tropeninstitut.<em>Wien</em></a>
+    <a href="#" class="logo"><img src="../assets/logo.svg" alt="Tropeninstitut.Wien" style="height: 42px; width: auto; display: block;"></a>
     <nav class="nav-links">
       <a href="#leistungen">Leistungen</a>
       <a href="#reisen">Reiseziele</a>
@@ -510,7 +510,7 @@ footer { background: var(--c-primary); color: rgba(250,245,238,0.78); padding: 7
   <div class="container">
     <div class="foot-grid">
       <div class="foot-col">
-        <div class="foot-brand">Tropeninstitut.<em>Wien</em></div>
+        <div class="foot-brand"><img src="../assets/logo.svg" alt="Tropeninstitut.Wien" style="height: 48px; width: auto; filter: brightness(0) invert(1); display: block;"></div>
         <p style="line-height:1.75;">Univ.-Prof. Dr. Alexander Zoufaly<br>FA für Innere Medizin und Infektiologie<br>Mariahilfer Straße 69/10<br>1060 Wien</p>
       </div>
       <div class="foot-col">
