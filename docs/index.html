@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tropeninstitut.Wien — Mockup-Vorschau (3 Design-Varianten)</title>
+<title>Tropeninstitut.Wien — Mockup-Vorschau (4 Design-Varianten)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
 <style>
@@ -23,7 +23,8 @@ h1 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: clamp
 h1 em { font-style: italic; color: #F4A261; font-weight: 500; }
 .lead { font-size: 18px; color: rgba(255,255,255,0.8); max-width: 720px; margin: 0 auto; }
 .grid { display: grid; grid-template-columns: 1fr; gap: 32px; }
-@media (min-width: 880px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 880px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1200px) { .grid { grid-template-columns: repeat(4, 1fr); } }
 .card {
   background: #fff;
   color: #1B3A4B;
@@ -46,6 +47,7 @@ h1 em { font-style: italic; color: #F4A261; font-weight: 500; }
 .strip-a { background: linear-gradient(135deg, #2C4438 0%, #87B79B 100%); }
 .strip-b { background: linear-gradient(135deg, #1B3A4B 0%, #E07A3D 100%); }
 .strip-c { background: linear-gradient(135deg, #FAF5EE 0%, #C8623B 100%); }
+.strip-d { background: linear-gradient(135deg, #1B3A4B 0%, #4FA8BD 100%); }
 .card-body { padding: 28px 28px 0; flex: 1; display: flex; flex-direction: column; }
 .card-tag {
   display: inline-block;
@@ -61,11 +63,15 @@ h1 em { font-style: italic; color: #F4A261; font-weight: 500; }
 .tag-a { background: #D4E2D8; color: #2C4438; }
 .tag-b { background: #FFF1DB; color: #8B4F1B; }
 .tag-c { background: #E8D5C2; color: #A14E2D; }
+.tag-d { background: #DEEEF2; color: #2E7585; }
 .card h2 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 26px; margin-bottom: 10px; letter-spacing: -0.015em; line-height: 1.15; }
 .card h2 em { font-style: italic; font-weight: 500; }
 .tag-a + h2 em { color: #5A9374; }
 .tag-b + h2 em { color: #E07A3D; }
 .tag-c + h2 em { color: #C8623B; }
+.tag-d + h2 em { color: #2E7585; }
+.card.featured { box-shadow: 0 0 0 3px #4FA8BD, 0 12px 32px -8px rgba(79,168,189,0.4); }
+.card.featured::before { content: "★ Nach deinem Feedback"; position: absolute; top: 12px; right: 12px; background: #2E7585; color: #fff; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 10px; border-radius: 999px; z-index: 2; }
 .card-sub { font-size: 13px; font-weight: 500; color: #6B7A85; margin-bottom: 16px; letter-spacing: 0.04em; }
 .card-desc { color: #5A6A75; font-size: 15px; margin-bottom: 24px; flex: 1; line-height: 1.6; }
 .card-bottom { padding: 0 28px; }
@@ -81,18 +87,30 @@ h1 em { font-style: italic; color: #F4A261; font-weight: 500; }
 <div class="wrap">
   <div class="header">
     <div class="eyebrow">Vorschau für Univ.-Prof. Dr. Alexander Zoufaly</div>
-    <h1>Drei Design-Richtungen für Tropeninstitut.Wien</h1>
-    <p class="lead">Bitte sieh dir die drei Mockups in Ruhe an — am Handy und am Desktop. Alle drei sind warm und persönlich gehalten, aber mit unterschiedlicher Stimmung. Wir wählen gemeinsam eine Richtung (oder einen Mix) als Basis für den Lovable-Build.</p>
+    <h1>Vier <em>Design-Richtungen</em> für Tropeninstitut.Wien</h1>
+    <p class="lead">Die ersten drei Varianten waren die ursprünglichen Vorschläge. Variante D ist neu — sie setzt dein Feedback aus der WhatsApp um: Variante A als Basis, in den Blautönen deines Logos, mit Fokus auf Tropenrückkehrer und einem eigenen Block zu Infektionsmedizin inkl. HIV und PrEP.</p>
   </div>
 
   <div class="grid">
+    <a href="d/" class="card featured">
+      <div class="preview-strip strip-d"></div>
+      <div class="card-body">
+        <span class="card-tag tag-d">Variante D</span>
+        <h2>Alex-<em>Edit</em></h2>
+        <div class="card-sub">Logo-Blautöne · Tropenrückkehrer · Infektionsmedizin</div>
+        <p class="card-desc">Variante A als Basis, neu in den Marine- und Petrol-Tönen des Logos. Drittes Versprechen umgeschrieben auf "Betreuung vor und nach der Reise". Neuer eigener Block zu Infektionsmedizin mit HIV-Diagnostik, PrEP, STI-Screening und Tropenrückkehrer-Untersuchung. Fokus weg von Tauglichkeit hin zu deinem inhaltlichen Schwerpunkt.</p>
+      </div>
+      <div class="card-bottom">
+        <span class="cta">Variante öffnen <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+      </div>
+    </a>
     <a href="a/" class="card">
       <div class="preview-strip strip-a"></div>
       <div class="card-body">
         <span class="card-tag tag-a">Variante A</span>
         <h2>Warm <em>Natur</em></h2>
         <div class="card-sub">Sage-Green · Wellness-Vibe · Ruhig</div>
-        <p class="card-desc">Tiefes Moos-Grün mit warmem Off-White, naturverbundene Atmosphäre. "Wir nehmen uns Zeit" als zentrales Versprechen, drei nummerierte Versprechen statt USP-Strip, ruhige Typografie.</p>
+        <p class="card-desc">Tiefes Moos-Grün mit warmem Off-White, naturverbundene Atmosphäre. "Wir nehmen uns Zeit" als zentrales Versprechen, drei nummerierte Versprechen statt USP-Strip, ruhige Typografie. Die ursprüngliche Basis, die du favorisiert hast.</p>
       </div>
       <div class="card-bottom">
         <span class="cta">Variante öffnen <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
@@ -125,8 +143,8 @@ h1 em { font-style: italic; color: #F4A261; font-weight: 500; }
   </div>
 
   <p class="meta">
-    Konstanten über alle drei Varianten: <strong>Inter (Body) + Fraunces (Headlines)</strong>, blaues Logo, gleiche Inhaltsdaten (Praxis, Adresse, Leistungen, Latido-Buchung).<br>
-    Alle drei können sowohl Sie als auch Du adressieren — Tonalität legen wir gemeinsam fest.
+    Konstanten über alle Varianten: <strong>Inter (Body) + Fraunces (Headlines)</strong>, blaues Logo, gleiche Inhaltsdaten (Praxis, Adresse, Leistungen, Latido-Buchung).<br>
+    Tonalität (Du / Sie) legen wir gemeinsam im Call fest.
   </p>
 </div>
 </body>
